@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Caillaud Armand</title>
+		<link href="css/header_footer.css" type="text/css" rel="stylesheet"/>
+		<link href="css/projets.css" type="text/css" rel="stylesheet"/>
+		<script src="js/projets.js"></script>
+	</head>
+	<body>
+		<header>
+			<div id="menu">
+		        <ul class="drop">
+		            <li ><a href="index.html">Accueil ▽</a>
+		            	<ul class="item">
+		            		<li><a href="index.html#cv">Mon CV</a></li>
+		            		<li><a href="index.html#ecole">Mon école</a></li>
+		            		<li><a href="index.html#projets">Mes projets</a></li>
+		            	</ul>
+		            </li>
+		            <li><a href="cv.html">CV ▽</a>
+		            	<ul class="item">
+		            		<li><a href="cv.html#formations">Formations</a></li>
+		            		<li><a href="cv.html#expériences">Expériences</a></li>
+		            		<li><a href="cv.html#compétences">Compétences</a></li>
+		            		<li><a href="cv.html#divers">Divers</a></li>
+		            		<li><a href="cv.html#coordonnées">Coordonnées</a></li>
+		            	</ul>
+		            </li>
+		            <li><a href="projets.html">Projets</a>
+		            </li>
+		    	 </ul>
+			</div>
+		</header>
+		<div id="main">
+		
+<!-- 								Introduction de la page-->
+			<div id="main_introduction">
+				<h1>Mes projets</h1>
+				<div>
+					<p>	J'ai pour ambition d'agrandir la liste suivante autant que possible. Ce porte-folio est et sera, j'espère,
+						une vitrine ou un historique de mes expériences et compétences.
+					</p>
+					<p>	Avec mes quelques partenaires sur mes différents projets, j'ai pu enrichir mes connaissances et expériences en Hardware : dessiner une PCB,
+						effectuer des soudures ainsi que les tests d'allimentation, manipuler divers périphériques et accessoires et tant d'autres choses.
+						Mais également en Software, domaine que j'affectionne particulièrment. Je commence à avoir une bonne prise en main d'Eclipse,
+						que ce soit pour la programmation d'une STM32 en langage C, la création d'un jeu en Java ou de ce site même.
+					</p>
+					<p>Voici tous les projets que j'ai réalisé jusqu'alors :</p>
+				</div>
+			</div>
+	
+<!-- 								Selection des projets-->
+			<div id="selection">
+				<ul class="liste">
+					<li><a class="button" id="morpion_button" onclick="action('morpion_project','morpion_button','morpion')">Morpion</a></li>
+					<li><a class="button" id="dames_button" onclick="action('dames_project','dames_button','dames')">Jeu de dames</a></li>
+					<li><a class="button" id="matrix_button" onclick="action('matrix_project','matrix_button','matrix')">Matrix Block</a></li>
+				</ul>
+				<div class="separation"></div>
+				<div>
+					<img id="selection_image" src="media/web.png">
+				</div>
+				<div class="separation"></div>
+				<ul class="liste">
+					<li><a class="button" id="tetris_button" onclick="action('tetris_project','tetris_button','tetris')">Tetris</a></li>
+					<li><a class="button" id="stefane_button" onclick="action('stefane_project','stefane_button','stefane')">Stefane</a></li>
+					<li><a class="button" id="elysium_button" onclick="action('elysium_project','elysium_button','elysium')">Elysium</a></li>
+				</ul>
+			</div>
+			
+<!-- 								Description des projets -->
+			<div id="projets">
+				
+				<div id="morpion_project" class="project">
+					<div class="title">
+						<h1>Morpion</h1> 
+					</div>
+					<div>
+						<div class="content">
+							<h2>Contexte :</h2>
+							<p>Partenaire : NAULEAU Simon (Linkedin <a href="https://www.linkedin.com/in/simon-nauleau-a7191a225/" class="linkedin">ici</a>)</p>
+							<p>Date : Novembre 2020</p>
+							<p>Langage : Python</p>
+							<h2>Cahier des charges (imposé):</h2>
+							<ul>
+								<li>Programmer le jeu du morpion</li>
+								<li>Possibilité de jouer à deux ou contre l'ordinateur</li>
+								<li>Plusieurs difficultés d'ordinateur</li>
+								<li>Nouveau mode de jeu : Morpion 3D</li>
+								<li>Nouveau mode de jeu : Plusieurs plateaux</li>
+								<li>Une interface simple d'utilisation</li>
+							</ul>
+							<h2>Details :</h2>
+							<p>Programmer le morpion n'était en réalité pas le projet dans sa globalité. Il consistait à également
+							programmer le jeu de Mérelles et proposer les deux à l'utilisateur. Cette autre partie à été produite par Simon, 
+							pour plus d'informations son contact est juste ci-dessus. Voici une idée visuelle de sa partie :
+							<div class="image">
+								<div>
+									<img src="media/morpion/merelles.png">
+								</div>
+							</div>
+							<p>Revenons au morpion. Il est le premier projet produit à l'ESEO. Python à été également le premier langage vu à l'école, 
+							la complexité de programmation est donc moins avancée que les futurs projets. Le menu propose de nombreuses 
+							options dynamiques de jeu ou de préférences comme ci-après :</p>
+							<div class="image">
+								<div>
+									<img src="media/morpion/menu.png">
+								</div>
+							</div>
+							<p>Le point le plus important de ma partie de ce projet à été l'IA de l'ordinateur. Après plusieurs recherches 
+							sur les stratégies au morpion, j'ai pu élaborer une IA qui, en théorie (je n'ai pas réussi à prouver le contraire) 
+							ne peut perdre si elle commence la partie. Soit elle adopte une stratégie victorieuse dès le deuxième coup 
+							en fonction du premier adverse, soit elle assure à minima un jeu nul.</p>
+						</div>
+					</div>
+				</div>
+				
+				<div id="dames_project" class="project">
+					<div class="title">
+						<h1>Jeu de dames</h1>
+					</div>
+					<div>
+						<div class="content">
+							<h2>Contexte :</h2>
+							<p>Partenaire : NAULEAU Simon (Linkedin <a href="https://www.linkedin.com/in/simon-nauleau-a7191a225/" class="linkedin">ici</a>)</p>
+							<p>Date : Mai 2021</p>
+							<p>Langage : C</p>
+							<h2>Cahier des charges (imposé):</h2>
+							<ul>
+								<li>Programmer le jeu de Dames</li>
+								<li>Possibilité de jouer à deux ou contre l'ordinateur</li>
+								<li>Plusieurs difficultés d'ordinateur</li>
+								<li>Possibilité de sauvegarder / charger une partie</li>
+								<li>Tchat pour deux joueurs</li>
+								<li>Une interface simple d'utilisation</li>
+							</ul>
+							<h2>Details :</h2>
+							<p>Ayant suivit une première année de Licence scientifique branche informatique avant de me 
+							réorienter à l'ESEO, j'ai pris une avance sur la compréhension de la logique et de la syntaxe du C 
+							assez grande face à mon partenaire. Par conséquent j'ai programmé une grande partie de ce projet. 
+							Les paramètres permettent de personnaliser la couleur des pions et de definir l'adversaire. Voici 
+							une idée de l'interface :</p>
+							<div class="image">
+								<div>
+									<img src="media/dames/menu.png">
+								</div>
+							</div>
+							<p>Concernant l'algorithmique, j'ai produit l'analyse du plateau pour faciliter grandement l'utilisation du 
+							jeu en premier lieu mais celle ci allait grandement m'aider pour l'élaboration de l'IA. Par récursivité, l'ordinateur 
+							parcourt tous les chemins de jeu possibles pour chaque pion jouables et enregistre les chemins dans 
+							un tableau. Ceci permet de selectionner seuls les chemins jouables pour respecter la règle de la 
+							prise majoritaire et laisser ce choix restreint au joueur. Enfin, grâce à ceci et un système de points 
+							de bonus et malus, l'ordinateur peut choisir un des meilleurs mouvements et adopter un style de jeu très 
+							oppressant.
+						</div>
+					</div>
+				</div>
+				
+				<div id="matrix_project" class="project">
+					<div class="title">
+						<h1>Matrix Block</h1>
+					</div>
+					<div>
+						<div class="content">
+							<h2>Contexte :</h2>
+							<p>Partenaire : NAULEAU Simon (Linkedin <a href="https://www.linkedin.com/in/simon-nauleau-a7191a225/" class="linkedin">ici</a>)</p>
+							<p>Date : Mai 2021</p>
+							<p>Microcontroleur : STM32F103 (Langage C)</p>
+							<h2>Cahier des charges (libre):</h2>
+							<ul>
+								<li>Créer un jeu de plateforme simple d'utilisation (manette de jeu)</li>
+								<li>Le jeu ainsi que son interface se fait sur une matrice de LED</li>
+								<li>La difficulté doit être équilbrée</li>
+								<li>Un système de score doit être implémenté</li>
+								<li>La génération doit être aléatoire et cohérente</li>
+							</ul>
+							<div class="video">
+								<iframe src="https://archive.org/embed/matrix_202206" width="640" height="480" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
+							</div>
+							<h2>Details :</h2>
+							<p>Ce projet à été mon tout premier de cette envergure. Plusieurs longues séances durant 
+							nous avons fait face a de nombreux soucis. La première matrice utilisée était mal 
+							documentée, il était donc trop complexe de communiquer avec le bon protocol. La seconde 
+							était fonctionnelle mais faute d'expérience, je n'avais pas les bonnes pratiques et j'ai
+							fini par l'endommager. La troisième était la bonne, cependant, j'ai grillé cette dernière lors
+							du tournage de la vidéo ci dessus par inattention. Nous avons ainsi experimenté l'utilisation
+							de nombreuses matrices différentes par leur mode de fonctionnement mais de communication également.</p>
+							<p>La génération aléatoire m'a permis de programmer mes premières machine à état, un avant
+							goût de l'électronique embarqué, option que je souhaite potentiellement sélectionner.</p>
+						</div>
+					</div>
+				</div>
+				
+				<div id="tetris_project" class="project">
+					<div class="title">
+						<h1>Tetris</h1>
+					</div>
+					<div>
+						<div class="content">
+							<h2>Contexte :</h2>
+							<p>Partenaire : AINS Nathan (Linkedin <a href="https://www.linkedin.com/in/nathan-ains/	" class="linkedin">ici</a>)</p>
+							<p>Date : Juin 2021</p>
+							<p>Microcontroleur : Arduino</p>
+							<h2>Cahier des charges (libre):</h2>
+							<ul>
+								<li>Reproduire le jeu de Tetris sur Arduino</li>
+								<li>Affichage sur un ecran TFT</li>
+								<li>Contrôles avec une manette de PS1</li>
+							</ul>
+							<h2>Details :</h2>
+							<p>Ce projet-ci à été très amusant à développer. Recréer ce célebre jeu implique de devoir 
+							le tester... encore... et encore ! Voici le rendu final :</p>
+							<div class="image">
+								<div>
+									<img src="media/tetris/projet.jpg">
+								</div>
+							</div>
+							<p>Nous avons mis quelques temps avant de trouver le moyen de récupérer les données 
+							provenant de la manette. Donc, pendant que Nathan cherchait à trouver comment utiliser 
+							la manette, je me suis lancé sur le jeu. La principale difficulté était de trouver le moyen de faire tomber les pièces à un rythme régulier, mais aussi de gérer les chûtes, les rotations, les suppressions de lignes. Au final nous avons réalisé un jeu fun doté d'un scoring 
+							fonctionnel !</p>
+						</div>
+					</div>
+				</div>
+				
+				<div id="stefane_project" class="project">
+					<div class="title">
+						<h1>Stefane</h1>
+					</div>
+					<div>
+						<div class="content">
+							<h2>Contexte :</h2>
+							<p>Partenaire : NAULEAU Simon (Linkedin <a href="https://www.linkedin.com/in/simon-nauleau-a7191a225/" class="linkedin">ici</a>)</p>
+							<p>Date : Novembre 2021</p>
+							<p>Microcontroleur : STM32F103 (Langage C)</p>
+							<h2>Cahier des charges (libre):</h2>
+							<ul>
+								<li>Créer un robot jouet poursuiveur de balle</li>
+								<li>Détection d'une balle de couleur précise</li>
+								<li>Déplacement vers cette dernière</li>
+								<li>"jouer" avec cette dernière (souffler dessus avec une turbine)</li>
+								<li>IHM pour informer l'utilsateur de son état</li>
+							</ul>
+							<div class="video">
+								<iframe src="https://archive.org/embed/stefane_202206" width="640" height="480" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
+							</div>
+							<h2>Details :</h2>
+							<p>Entre moteurs pas à pas, écran LCD, Pixy cam, LED, bouton poussoir, transistor (commande de la turbine), 
+							nous avons fait en sorte d'ajouter de nombreux composants à pilloter simultanément pour saisir l'opportunité 
+							d'emmagasiner un maximum d'expérience.</p>
+							<div class="image">
+								<div>
+									<img src="media/stefane/dessus.png">
+								</div>
+							</div>
+							<p>Ce fut un succès ! En plus d'avoir du dessiner la PCB et souder tous les compposants, notre méthodoligie 
+							consistait à tester chaque composant individuellement afin de valider notre maîtrise. Une ceci fait, 
+							il s'gissait d'ajouter un à un chacuns des composants au robot en s'assurant de la non régression 
+							du système. En ayant fait cela, nous avons été très saisfait en se rendant compte à la fin de notre projet 
+							que nous ne sommes jamais tombé dans une impasse ! Tous les problèmes rencontrés ont été resolu à la source 
+							rapidement grâce à notre méthode, ce qui nous a grandement simplifié la tâche jusqu'à la fin du projet !</p>
+							<p>Ce projet m'a été de loin le plus formateur jusqu'à aujourd'hui. Je me suis rendu compte que prendre du temps 
+							en début de projet pour s'investir des composants et outils, pour les maîtriser, n'était pas une perte de temps 
+							mais un investissement plus que rentable.</p>
+						</div>
+					</div>
+				</div>
+				
+				<div id="elysium_project" class="project">
+					<div class="title">
+						<h1>Elysium</h1>
+					</div>
+					<div>
+						<div class="content">
+							<h2>Contexte :</h2>
+							<p>Partenaires :</p>
+							<ul>
+								<li>CALVO Matthieu (Linkedin <a href="https://www.linkedin.com/in/matthieu-calvo-711936221/" class="linkedin">ici</a>)</li>
+								<li>AUGEREAU Evan (Linkedin <a href="https://www.linkedin.com/in/evan-augereau/" class="linkedin">ici</a>)</li>
+							</ul>
+							<p>Date : Decembre 2021</p>
+							<p>Langage : Java (interface JavaSwing)</p>
+							<h2>Cahier des charges (libre):</h2>
+							<ul>
+								<li>Créer un jeu de gestion</li>
+								<li>Système de batiments producteurs, de ressources, de jauges de besoins</li>
+								<li>Différents niveaux aux éléments de jeu</li>
+								<li>Victoire et défaite possible</li>
+							</ul>
+							<h2>Details :</h2>
+							<p>La programmation orienté objet à été une chose nouvelle pour nous. C'est pour cela que nous avons joué le jeu 
+							et avons décidé de produire un tel jeu, correspondant bien à ce type de programmation.</p>
+							<p>Je me suis occupé en grande partie de l'ensemble batiments ressources et amélioration tout en veillant sur l'adaptibilité du 
+							code. Voici la fenêtre d'amélioration des bâtiments :</p>
+							<div class="image">
+								<div>
+									<img src="media/elysium/upgrade.png">
+								</div>
+							</div>
+							<p>Il est intéressant de voir la programmation comme l'intéraction entre plusieurs objets possedant divers attribus
+							et méthodes pour produire un tout fonctionnel.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<footer>
+				<p>Pour plus de détails sur mes projets, mes coordonnées sont <a href="cv.html#coordonnées">ici</a>.</p>
+			</footer>
+		</div>
+	</body>
+</html>

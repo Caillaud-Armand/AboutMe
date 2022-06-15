@@ -1,0 +1,166 @@
+@charset "utf-8";
+
+
+body {
+	font-family: "Lucida Sans";
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+/*Bordures de test pour aider à l'organisation des éléments*/
+
+/* #main{border: solid lime;} */
+/* #main .project{border:solid navy;} */
+/* #main div{border:solid pink;} */
+/* #main a{border:solid yellow;} */
+/* #main img{border: solid purple;} */
+/* #main video{border: solid olive;} */
+/* #main h1,h2,h3,h4,h5,h6{border:solid aqua;} */
+/* #main p{border: solid teal;} */
+/* #main ul{border: solid red;} */
+/* #main li{border: solid green;} */
+/* ::after, ::before{border: dotted fuchsia;} */
+
+
+.drop > li:nth-child(2) > a{		/*Met en evidence la page courante dans le header, numero de l'enfant à changer si l'ordre des items du header changent aussi*/
+	font-weight: bolder;
+	font-size: larger;
+	color: #f04040;
+}
+
+#main{
+	display: flex;
+	flex-direction: column;
+	position:relative;
+	top: 100px;						/*hauteur du header*/
+}
+
+#main_introduction{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#main_introduction > *{
+	margin : 20px;
+}
+
+#main_introduction a{
+	padding: 20px;
+	font-size: x-large;
+	font-weight: bold;
+	text-decoration: none;
+	color: white;
+	background-color: #a80000;
+	transition: 0.4s;
+}
+
+#main_introduction a:hover{
+	background-color: #680000;
+}
+
+#main_introduction a:active{
+	background-color: #480000;
+}
+
+#main_introduction p{
+	margin : 10px;
+}
+
+
+#CV > div{
+	border-top: solid #680000 10px;
+}
+
+#CV > div:last-child{
+	border-bottom: solid #680000 10px;
+}
+
+#CV > div > div{
+	margin: 20px;
+}
+
+.dark{
+	background: black;
+	display: flex;
+}
+
+.dark *{
+	color: white;
+}
+
+.dark h1{
+	color: #f04040;
+}
+
+.bright h1{
+	color: #a80000;
+}
+
+.bright{
+	display: flex;
+	flex-direction: row-reverse;
+}
+
+.content{
+	display: flex;
+	max-width: 70%;
+	align-items: flex-start;
+}
+
+.content h1{
+	flex-shrink: 0;
+}
+
+.content ul{
+	margin: 10px;
+	list-style-position: inside;
+}
+
+.content li > a{
+	font-size: larger;
+	font-weight: bold;
+}
+
+.element{
+	margin: 5px 0 5px 30px;
+	display: flex;
+	flex-direction: column;
+}
+
+.bright .link{
+	color: #a80000;
+	font-weight: bold;
+	transition: 0.2s;
+}
+
+.bright .link:hover{
+	color: #680000;
+}
+
+.dark .link{
+	color: #f04040;
+	font-weight: bold;
+	transition: 0.2s;
+}
+
+.dark .link:hover{
+	color: #a80000;;
+}
+
+.bright .bold{
+	color: #a80000;
+	font-weight: bolder;
+}
+
+.dark .bold{
+	color: #f04040;
+	font-weight: bolder;
+}

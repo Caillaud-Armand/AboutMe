@@ -1,0 +1,339 @@
+@charset "utf-8";
+
+
+body {
+	font-family: "Lucida Sans";
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+/*Bordures de test pour aider à l'organisation des éléments*/
+
+/* #main{border: solid lime;} */
+/* #main div{border:solid pink;} */
+/* #main a{border:solid yellow;} */
+/* #main img{border: solid white;} */
+/* #main h1,h2,h3,h4,h5,h6{border:solid aqua;} */
+/* #main p{border: solid teal;} */
+/* #main ::after{border: dotted fuchsia;} */
+
+.drop > li:nth-child(1) > a{		/*Met en evidence la page courante dans le header, numero de l'enfant à changer si l'ordre des items du header changent aussi*/
+	font-weight: bolder;
+	font-size: larger;
+	color: #f04040;
+}
+
+#main{
+	display: flex;
+	flex-direction: column;
+	position:relative;
+	top: 100px;								/*hauteur du header*/
+}
+
+/* Visuel de l'introudction*/
+
+#introduction{
+	position: relative;
+	background: url('../media/sky.jpg') bottom / cover;
+	height: 400px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#introduction::after {
+	content: "";
+	background-color: black;
+	position: absolute;
+	top:0;
+	left:0;
+	height: 100%;
+	width: 100%;
+	opacity: 0.6;
+}
+
+#introduction > div{
+	margin: 20px;
+	position:relative;
+	color: white;
+	z-index: 1;
+}
+
+#introduction img{
+	padding: 10px;
+	width: 50px;
+}
+
+#introduction .sep{
+	height: 0;
+	background-color: transparent;
+	width: 3px;
+	transition-duration: 0.4s;
+}
+
+#introduction:hover .sep{
+	height: 40%;
+	background-color: white;
+}
+
+#presentation{
+	height: 100px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: flex-end;
+}
+
+#presentation *{
+	margin: 5px;
+}
+
+
+#logos > div{
+	display: flex;
+	align-items: center;
+}
+
+#logos a{
+	color: white;
+	text-decoration: none;
+}
+
+#linkedin{
+	position: relative;
+}
+
+#linkedin::after{
+	content: "";
+	background-color: white;
+	width: 0;
+	height: 1px;
+	position: absolute;
+	left:0;
+	top: 110%;
+	transition-duration: 0.3s;
+}
+
+#linkedin:hover::after{
+	width: 100%;
+}
+
+/*Visuel de la section CV et Projets (theme clair)*/
+
+.bright{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 300px;
+}
+
+.bright > div{
+	margin: 50px;
+}
+
+.bright .boite{
+	position: relative;
+	height: 150px ;
+	width: 150px;
+}
+
+#cv .boite{
+	background: url('../media/armand.jpg') bottom / cover;
+}
+
+#projets .boite{
+	background: url('../media/projets.png') bottom / cover;
+}
+
+
+.bright .boite::after{
+	content: "a";
+	background-color: black;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+#cv .boite::after{
+	opacity: 0.6;
+}
+
+#projets .boite::after{
+	opacity: 0.5;
+}
+
+
+.bright .boite *{
+	z-index: 1;
+}
+
+.bright .boite div{
+	position: absolute;
+	left: 8px;
+	top: 18px;
+	width: 80%;
+	height: 80%;
+	border: solid transparent;
+	border-left-color: white;
+	border-top-color: white;
+}
+
+.bright .boite a{
+	color: black;
+	border: solid black;
+	text-decoration: none;
+	font-weight: bold;
+	background-color: white;
+	position: absolute;
+	width: 60%;
+	height: 30%;
+	top: 80%;
+	right: 10%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition-duration: 0.3s;
+}
+
+.bright .boite a:hover{
+	background-color: #a80000;
+	border-color: #a80000;
+	color: white;
+}
+
+.bright .boite a::after{
+ 	content: "";
+ 	position: absolute;
+ 	top: 5px;
+ 	right: 5px;
+ 	height: 0%;
+ 	width: 0%;
+ 	border-top: solid transparent;
+ 	border-right: solid transparent;
+ 	transition-duration: 0.3s;
+}
+
+.bright .boite a:hover::after{
+ 	height: 70%;
+ 	width: 80%;
+ 	border-top-color: white;
+ 	border-right-color: white;
+ }
+ 
+.bright .boite a:active{
+ 	background-color: #680000;
+ 	border-color: #680000;
+ }
+
+/* Visuel de la section ESEO  (theme sombre)*/
+
+#fond{
+	position: relative;
+	display: flex;
+	flex-grow: 1;
+	justify-content: center;
+	align-items: center;
+	background: url('../media/eseo.jpg') top / cover;
+}
+
+#fond::after{
+	content:"";
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: black;
+	opacity: 0.7;
+}
+
+#fond > div{
+	z-index: 1;
+	margin: 50px;
+}
+
+.dark p, .dark a, .dark h2{
+	color: white;
+}
+
+.dark{
+	display: flex;
+	flex-direction: row;
+	
+	padding: 30px;
+	height: 300px;
+}
+
+.dark .boite{
+	position: relative;
+	height: 150px;
+	width: 150px;
+	background-color: white;
+}
+
+.dark .boite div{
+	position: absolute;
+	right: 8px;
+	top: 18px;
+	width: 80%;
+	height: 80%;
+	border: solid transparent;
+	border-right-color: black;
+	border-top-color: black;
+}
+
+.dark .boite a{
+ 	background-color: black;
+ 	font-weight: bold;
+ 	text-decoration: none;
+ 	position: absolute;
+ 	width: 60%;
+ 	height :30%;
+ 	top: 80%;
+ 	left: 10%;
+ 	display: flex;
+ 	align-items: center;
+ 	justify-content: center;
+ 	transition-duration: 0.3s;
+ }
+ 
+.dark .boite a:hover{
+ 	background-color: #a80000; 
+ }
+ 
+.dark .boite a::after{
+ 	content: "";
+ 	position: absolute;
+ 	top: 5px;
+ 	left: 5px;
+ 	height: 0%;
+ 	width: 0%;
+ 	border-top: solid transparent;
+ 	border-left: solid transparent;
+ 	transition-duration: 0.3s;
+ }
+ 
+.dark .boite a:hover::after{
+ 	height: 70%;
+ 	width: 80%;
+ 	border-top-color: white;
+ 	border-left-color: white;
+ }
+ 
+.dark .boite a:active{
+ 	background-color: #680000;
+ }
+
+ 
+ .dark p, .bright p{
+ 	margin: 10px;
+ }
