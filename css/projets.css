@@ -52,7 +52,7 @@ html {
 }
 
 .display:nth-child(3){	/* matrix blocks*/
-	height: 1200px;
+	height: 1300px;
 }
 
 .display:nth-child(4){	/* tetris*/
@@ -60,7 +60,7 @@ html {
 }
 
 .display:nth-child(5){	/* stefane*/
-	height: 1750px;
+	height: 1800px;
 }
 
 .display:nth-child(6){	/* elysium*/
